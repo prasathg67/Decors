@@ -7,6 +7,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { IoCall } from "react-icons/io5";
+
 
 export default function Header({variant}) {
     const [isSticky, setIsSticky] = useState(false);
@@ -24,10 +26,10 @@ export default function Header({variant}) {
         <div className={`header__sticky ${ variant ? variant : "" } ${isSticky ? "header__sticky-sticky-menu" : ""}`}>
 
       {['lg'].map((expand) => (
-        <Navbar key={expand} expand={expand} className="py-3">
+        <Navbar key={expand} expand={expand} className="navbar py-3">
             <Container fluid>
             <Navbar.Brand href="#"><Image
-                src={require("../assets/img/sd_logo.png")}
+                src={require("../assets/img/sd_logo.jpg")}
                 className="logo"
               ></Image></Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
@@ -46,21 +48,13 @@ export default function Header({variant}) {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                    <Nav.Link href="#action1">Home</Nav.Link>
-                    <Nav.Link href="#action2">About</Nav.Link>
-                    <Nav.Link href="#action3">Services</Nav.Link>
-                    <Nav.Link href="#action4">Gallery</Nav.Link>
-                    <Nav.Link href="#action5">Contact</Nav.Link>
-                </Nav>
-                <Form className="d-flex">
-                  <Form.Control
-                    type="search"
-                    placeholder="Search"
-                    className="me-2"
-                    aria-label="Search"
-                  />
-                  <Button variant="outline-success">Search</Button>
-                </Form>
+                    <Nav.Link href="#action1" className='text-white'>Home</Nav.Link>
+                    <Nav.Link href="#action2" className='text-white'>About</Nav.Link>
+                    <Nav.Link href="#action3" className='text-white'>Services</Nav.Link>
+                    <Nav.Link href="#action4" className='text-white'>Gallery</Nav.Link>
+                    <Nav.Link href="#action5" className='text-white'>Contact</Nav.Link>
+                    <Nav.Link href="#action6" className='call-btn'><IoCall /> Call Now</Nav.Link>
+                </Nav>                
               </Offcanvas.Body>
             </Navbar.Offcanvas>
             </Container>
