@@ -10,8 +10,19 @@ Nav{
     font-weight: 600;
     font-size: 18px;
 }
-Nav:hover{
-    color: orangered !important;
+.navbar-nav .nav-link{
+    padding: 10px;
+    margin: 0px 10px;
+    transition: all 0.3s;
+    border-radius: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+.navbar-nav .nav-link:hover{
+    background-color: #001b63 !important;
+    border-radius: 50px;
+
 }
 .header__sticky-sticky-menu {
     position: fixed;
@@ -33,6 +44,17 @@ Nav:hover{
       top: 0;
     }
   }
+.header__sticky.header__sticky-sticky-menu .navbar{
+    background-color: #fff;
+
+}
+.header__sticky.header__sticky-sticky-menu .navbar-nav .nav-link{
+    color: #000 !important;
+}
+.header__sticky.header__sticky-sticky-menu .navbar-nav .nav-link:hover{
+    color: #fff !important;
+}
+
 .navbar {
     background-color: transparent;
     position: absolute !important;
@@ -40,11 +62,35 @@ Nav:hover{
     width: 100%;
 }
 .call-btn{
-    background-color: #fff !important;
-    border-radius: 20px;
-    color: #292929 !important;
+    background-color: #1ae2e5 !important;
+    border-radius: 50px;
+    color: #000000 !important;
     padding: 10px 20px !important;
 }
+.call-btn:hover{
+    box-shadow: 3px 3px #9cc2ff;
+    color: #fff !important;
+}
+.offcanvas {
+    background-color: #babad6 !important;
+}
+.offcanvas-body{
+    text-align: center;
+}
+/* header address */
+.header_address li{
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+.header_address li a{
+    color: #001b63;
+
+}
+.header_address li .ad_icon{
+    font-size: 18px;
+}
+
 /* carousel css */
 .slider{
     width: 100%;
@@ -70,11 +116,79 @@ Nav:hover{
     font-family: "Montserrat", sans-serif;
     font-size: 25px;
     font-weight: 500;
-    text-shadow: 5px 3px 5px #131518;
+    text-shadow: 2px 2px 2px #131518;
     width: 60%;
 }
 .carousel-control-prev,.carousel-control-next{
     display: none !important;
+}
+/* Count Up section */
+.count-up{
+    background-image: url('../src/assets/img/Count-bg2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #000;
+}
+.count-up h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+.count-up p{
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/* Contact section css */
+
+.contact_section{
+    background-image: url(../src/assets/img/fotback.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.contact_section h2{
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #9cc2ff;
+}
+.contact_section h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 43px;
+    font-weight: 600;
+}
+.contact_section .con_icon{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #fff;
+    color: #001b63;
+    border-radius: 50%;
+}
+.contact_section .con_icon:hover{
+    background-color: #001b63;
+    color: #9cc2ff;
+}
+.contact_section p{
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: justify;
+}
+.contact_section ul li a{
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+.contact_section ul li a:hover{
+    color: #9cc2ff !important;
 }
 @media(max-width:1200px){
     .carousel-caption h2{
@@ -102,12 +216,28 @@ Nav:hover{
     .carousel-indicators{
         display: none !important;
     }
-}
-@media(max-width:767px){
     .carousel-caption h2{
         font-size: 25px;
     }
     .carousel-caption p{
         font-size: 18px;
+    }
+    .contact_section h2{
+        font-size: 25px;
+    }
+    .contact_section p{
+        font-size: 15px;
+    }
+    .contact_section ul li a{
+        font-size: 15px;
+    }
+    .contact_section h1{
+        font-size: 30px;
+    }
+    .contact_section p{
+        font-size: 15px;
+    }
+    .contact_section h2{
+        font-size: 22px;
     }
 }

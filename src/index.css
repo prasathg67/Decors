@@ -4,10 +4,19 @@ body{
     box-sizing: border-box;
 }
 a{
-    text-decoration: none;
+    text-decoration: none !important;
     outline: none;
 }
 img{
     max-width: 100%;
 }
-
+ul{
+    list-style-type: none;
+    margin: 0px !important;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Poppins", sans-serif;
+}
+ul,p{
+    font-family: "Montserrat", sans-serif;
+}
