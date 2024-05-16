@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Col, Container, Image, Row } from 'react-bootstrap'
 import { FaBlenderPhone, FaFacebookF, FaPhoneAlt, FaPhoneSquareAlt } from 'react-icons/fa'
 import { FaLocationDot, FaXTwitter } from 'react-icons/fa6'
 import { IoLogoWhatsapp } from 'react-icons/io'
 
 export default function Contact() {
+    const [year, setYear] = useState(new Date().getFullYear());
+    useEffect(() => {
+        // Update the year when the component mounts.
+        setYear(new Date().getFullYear());
+      }, []);
+
   return (
-    <div>
-      <section className='contact_section py-lg-5 py-3' data-aos="fade-up" data-aos-easing="linear"
-     data-aos-duration="500">
+    <div  data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+      <section className='contact_section py-lg-5 py-3'>
         <Container>
             <h1 className='text-center text-white mb-lg-5 mb-3'>Contact Us</h1>
             <Row>
@@ -47,14 +52,25 @@ export default function Contact() {
                                 <a href="https://www.facebook.com/shakthi.decor.9?mibextid=ZbWKwL" className='me-2'><FaFacebookF className='con_icon' /></a>
                                 <a href="" className='me-2'><FaXTwitter className='con_icon ' /></a>
                                 <a href="tel:9944808181"><IoLogoWhatsapp className='con_icon' /></a>
-                            </div>
-                            
+                            </div>                            
                         </Col>
                     </Row>
                 </Col>
             </Row>
         </Container>
       </section>
+      <footer className='py-4 footer_section'>
+        <Container>
+            <Row>
+                <Col lg={6}>
+                <p className='text-white m-lg-0 text-lg-start text-center'>Copyright &copy; {year} <span className="text-nowrap"> All Rights Reserved.</span></p>
+                </Col>
+                <Col lg={6}>
+                    <p className='text-lg-end text-center m-0 text-white'>Developed By <a href="https://legendstechsolution.com/" className='text-white text-nowrap'>Legends Tech Solution</a></p>
+                </Col>
+            </Row>
+        </Container>
+      </footer>
     </div>
   )
 }

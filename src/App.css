@@ -48,9 +48,13 @@ Nav{
     background-color: #fff;
 
 }
+.header__sticky.header__sticky-sticky-menu .header_address li a{
+    color: #000 !important;
+}
 .header__sticky.header__sticky-sticky-menu .navbar-nav .nav-link{
     color: #000 !important;
 }
+
 .header__sticky.header__sticky-sticky-menu .navbar-nav .nav-link:hover{
     color: #fff !important;
 }
@@ -83,8 +87,8 @@ Nav{
     font-family: "Poppins", sans-serif;
     font-weight: 500;
 }
-.header_address li a{
-    color: #001b63;
+.header_address li a:hover{
+    color: #9cc2ff !important;
 
 }
 .header_address li .ad_icon{
@@ -190,6 +194,82 @@ Nav{
 .contact_section ul li a:hover{
     color: #9cc2ff !important;
 }
+
+/* Form images */
+.form_section{
+    background-image: url(../src/assets/img/form_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.form_section .form_imgs{
+    position: relative;
+}
+.form_section .form_imgs img{
+    border-radius: 50%;
+}
+.form_section .form_img1,.form_img2,.form_img3,.form_img4{
+    animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+}
+.form_section .form_img1{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.form_section .form_img2{
+    position: absolute;
+    right: 0px;
+    top: 110px;
+}
+.form_section .form_img3{
+    position: absolute;
+    right: 80px;
+    top: 400px;
+}
+.form_section .form{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.form_section .ht_btn{
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    background-color: #001b63;
+    border-radius: 50px;
+    color: #fff;
+    transition: 0.3s;
+}
+.form_section .ht_btn:hover{
+    box-shadow: 3px 3px #001b63;
+    background-color: #9cc2ff;
+    color: #000;
+}
+.form_section .form-control{
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: 2px solid #000;
+    box-shadow: 8px 8px #eae4d5;
+}
+.footer_section{
+    background-color: #001b63;
+}
+.footer_section p{
+    font-weight: 500;
+    font-size: 17px;
+}
+.footer_section a:hover{
+    color: #9cc2ff !important;
+}
 @media(max-width:1200px){
     .carousel-caption h2{
         font-size: 45px;
@@ -205,6 +285,19 @@ Nav{
     }
     .navbar-toggler{
         background-color: #fff !important;
+    }
+    .form_section .form_img2,.form_img3{
+        position: static;
+    }
+    .form_section .form_img3{
+        position: static;
+    }
+    .form_section .form_img1,.form_img2,.form_img3,.form_img4{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 250px !important;
+        height: 250px !important;
     }
 }
 @media(max-width:767px){

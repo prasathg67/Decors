@@ -27,43 +27,28 @@ export default function Header({variant}) {
   return (
     <>
     {/* Header Address */}
-    <section className='header_address'>
-      <Container className='py-3'>
-        <Row>
-          <Col sm={9} className='d-sm-block d-none'>
-            <div>
-              <ul className='hide_mobile d-flex'>
-                <li className='me-3 d-lg-block d-none'><IoMdMail className='ad_icon' /><a href="mailto:shakthidecor82@gmail.com" target='_blank' > shakthidecor82@gmail.com</a></li>
-                <li className='me-3 d-lg-block d-none'><IoCall className='ad_icon' /><a href="tel:04134900281">(0413)-4900 281</a></li>
-                <li className='me-3'><IoLogoWhatsapp className='ad_icon text-success' /><a href="tel:9944808181">+91 994480 8181</a></li>
-              </ul>
-            </div>
-          </Col>
-          <Col sm={3} className='d-sm-block d-none'>
-            <ul className='icons d-flex'>
-              <li className='me-3'><a href="https://www.facebook.com/shakthi.decor.9?mibextid=ZbWKwL"><FaFacebookF className='ad_icon text-primary' /></a></li>
-              <li className='me-3'><a href=""><FaXTwitter className='ad_icon' /></a></li>
-            </ul>
-          </Col>
-          <Col className='d-sm-none d-block'>
-            <div className='d-flex justify-content-around'>
-              <ul>
-                <li className=''><IoLogoWhatsapp className='ad_icon' /><a href="tel:9944808181">+91 994480 8181</a></li>
-              </ul>
-              <ul className='d-flex'>
-                <li className='me-3'><a href="https://www.facebook.com/shakthi.decor.9?mibextid=ZbWKwL"><FaFacebookF className='ad_icon text-primary' /></a></li>
-                <li className='me-3'><a href=""><FaXTwitter className='ad_icon' /></a></li>
-              </ul>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </section>
+    
 
     {/* Navabr section */}
       
       <div className={`header__sticky ${ variant ? variant : "" } ${isSticky ? "header__sticky-sticky-menu" : ""}`}>
-
+        <section className="header_address fixed-top pt-2">
+          <Container>
+            <Row>
+              <Col sm={12} className='d-sm-block d-none text-end'>
+              {/* <ul className='icons d-flex justify-content-end'>
+                <li className='me-3'><a href="https://www.facebook.com/shakthi.decor.9?mibextid=ZbWKwL"><FaFacebookF className='ad_icon text-primary' /></a></li>
+                <li className='me-3'><a href=""><FaXTwitter className='ad_icon' /></a></li>
+              </ul> */}
+                <ul className='hide_mobile d-flex justify-content-end'>
+                  <li className='me-3 d-lg-block d-none'><IoMdMail className='ad_icon' /><a href="mailto:shakthidecor82@gmail.com" target='_blank' className='text-white' > shakthidecor82@gmail.com</a></li>
+                  <li className='me-3 d-lg-block d-none'><IoCall className='ad_icon' /><a href="tel:04134900281" className='text-white'>(0413)-4900 281</a></li>
+                  <li className='me-3'><IoLogoWhatsapp className='ad_icon text-success' /><a href="tel:9944808181" className='text-white'>+91 994480 8181</a></li>
+                </ul>
+              </Col>
+            </Row>
+          </Container>
+        </section>
       {['lg'].map((expand) => (
         <Navbar key={expand} expand={expand} className="navbar py-3">
             <Container fluid>
