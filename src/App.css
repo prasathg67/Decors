@@ -260,6 +260,9 @@ Nav{
     border: 2px solid #000;
     box-shadow: 8px 8px #eae4d5;
 }
+
+/* Footer section */
+
 .footer_section{
     background-color: #001b63;
 }
@@ -270,6 +273,25 @@ Nav{
 .footer_section a:hover{
     color: #9cc2ff !important;
 }
+/* Why section */
+.why_section{
+    background-image: url('.//assets/img/why.jpg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+}
+/* Float Buttons*/
+
+.float_fb{
+    color: #1877F2;
+}
+.float_whats{
+    color: #25D366;
+}
+.float_insta{
+    color: #C13584;
+}
+
 @media(max-width:1200px){
     .carousel-caption h2{
         font-size: 45px;
