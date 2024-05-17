@@ -5,6 +5,7 @@ import CountUpPage from './components/CountUpPage';
 import FloatingBtn from './components/FloatingBtn';
 import FormSection from './components/FormSection';
 import Header from './components/Header';
+import Testimonial from './components/Testimonial';
 import WhyShakthi from './components/WhyShakthi';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <CountUpPage />
       <FormSection />
       <WhyShakthi />
+      <Testimonial />
       <Contact />
       <FloatingBtn />
     </>
