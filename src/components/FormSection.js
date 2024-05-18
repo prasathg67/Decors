@@ -64,7 +64,7 @@ export default function FormSection() {
                   <Image src={require("../assets/img/form_img3.jpg")} />
                 </div>
                 <div className='form_img4' style={{width:"250px",height:"350px"}} >
-                  <Image src={require("../assets/img/form_img4.jpg")} />
+                  <Image src={require("../assets/img/form_img4 .jpg")} />
                 </div>
               </div>
             </div>            

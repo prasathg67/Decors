@@ -213,9 +213,11 @@ Nav{
     animation: bounce 2s ease infinite;
 }
 /* Testimonial section */
+
 .testimonial_section .card{
     position: relative;
     padding-top: 70px;
+    box-shadow: 0px 6px 34px rgba(215, 216, 222, 0.41);
 }
 .testimonial_section .card img{
     width: 80px;
@@ -228,10 +230,20 @@ Nav{
 }
 .testimonial_section p{
     font-size: 18px;
+    text-align: justify;
 }
 .testimonial_section .h5{
     font-size: 20px;
     font-weight: 600;
+}
+.testimonial_section h2{
+    font-size: 43px;
+    font-weight: 600;
+}
+.divider{
+    width: 50px;
+    height: 5px;
+    background-color: #001b63;
 }
 
 @keyframes bounce {
@@ -345,6 +357,9 @@ Nav{
     .testimonial_section p{
         font-size: 15px;
     }
+    .testimonial_section h2{
+        font-size: 35px;
+    }
 }
 @media(max-width:767px){
     .carousel-caption {
@@ -381,5 +396,8 @@ Nav{
     }    
     .testimonial_section .h5{
         font-size: 18px;
+    }
+    .testimonial_section h2{
+        font-size: 30px;
     }
 }

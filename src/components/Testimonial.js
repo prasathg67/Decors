@@ -6,22 +6,12 @@ export default function Testimonial() {
   var settings = {
     dots: false,
     infinite: true,
-    speed: 3000,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     cssEase: "linear",
     responsive: [
-        // {
-        //   breakpoint: 1024,
-        //   settings: {
-        //     slidesToShow: 3,
-        //     slidesToScroll: 3,
-        //     infinite: true,
-        //     dots: true
-        //   }
-        // },
         {
           breakpoint: 767,
           settings: {
@@ -40,9 +30,10 @@ export default function Testimonial() {
       ]
   };
   return (
-    <section className="testimonial_section py-lg-5 py-3">
+    <section className="testimonial_section py-lg-5 py-3" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
         <Container >
-            <h2 className="text-center mb-lg-4 mb-3">What Our Client Says</h2>
+            <h2 className="text-center mb-lg-4 mb-3">What Our Client Say</h2>
+            <p className="text-center mb-lg-5 my-3"><b> We are a trusted interior designer company in Dwarka. Over 50+ experts, 5,000 homes already handover!</b></p>
             <Slider {...settings}>
                 <div className="px-2">
                     <Card>

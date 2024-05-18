@@ -1,15 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Col, Image, Row } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import { FaFacebookF } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
-import { IoLogoWhatsapp, IoMdMail } from 'react-icons/io';
+import { FaLocationDot } from 'react-icons/fa6';
 import { IoCall } from "react-icons/io5";
 
 
@@ -26,9 +21,6 @@ export default function Header({variant}) {
     }, []);
   return (
     <>
-    {/* Header Address */}
-    
-
     {/* Navabr section */}
       
       <div className={`header__sticky ${ variant ? variant : "" } ${isSticky ? "header__sticky-sticky-menu" : ""}`}>
@@ -41,9 +33,9 @@ export default function Header({variant}) {
                 <li className='me-3'><a href=""><FaXTwitter className='ad_icon' /></a></li>
               </ul> */}
                 <ul className='hide_mobile d-flex justify-content-end'>
-                  <li className='me-3 d-lg-block d-none'><IoMdMail className='ad_icon' /><a href="mailto:shakthidecor82@gmail.com" target='_blank' className='text-white' > shakthidecor82@gmail.com</a></li>
-                  <li className='me-3 d-lg-block d-none'><IoCall className='ad_icon' /><a href="tel:04134900281" className='text-white'>(0413)-4900 281</a></li>
-                  <li className='me-3'><IoLogoWhatsapp className='ad_icon text-success' /><a href="tel:9944808181" className='text-white'>+91 994480 8181</a></li>
+                  <li className='me-3 d-lg-block d-none'><FaLocationDot className='ad_icon me-2' /><a href="https://www.google.com/maps/place/Shakthi+Decor/@11.9354809,79.8100607,17z/data=!3m1!4b1!4m6!3m5!1s0x3a536176f74b5df7:0x20491712d919c3eb!8m2!3d11.9354757!4d79.8149316!16s%2Fg%2F11b7hsqqhc?entry=ttu" target='_blank' className='text-white' >233,Thiruvalluvar Salai, Near Nellithope Signal, Pondicherry-605013</a></li>
+                  {/* <li className='me-3 d-lg-block d-none'><IoCall className='ad_icon' /><a href="tel:04134900281" className='text-white'>(0413)-4900 281</a></li>
+                  <li className='me-3 d-lg-block d-none'><IoLogoWhatsapp className='ad_icon text-success' /><a href="tel:9944808181" className='text-white'>+91 994480 8181</a></li> */}
                 </ul>
               </Col>
             </Row>
