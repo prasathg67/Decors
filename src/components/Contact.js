@@ -15,18 +15,18 @@ export default function Contact() {
     <div  data-aos="fade-up" data-aos-easing="linear" data-aos-duration="400">
       <section className='contact_section py-lg-5 py-3'>
         <Container>
-            <h1 className='text-center text-white mb-lg-5 mb-3'>Contact Us</h1>
+            <h2 className='text-center text-white mb-lg-5 mb-3'>Contact Us</h2>
             <Row>
                 <Col lg={6}>
                     <Row>
                         <Col md={6}>
-                            <h2>Our Ambition</h2>
+                            <h3>Our Ambition</h3>
                             <hr className='text-white'/>
                             <p className='text-white mt-3'>The core of Shakthi Decor business model includes trusting partnerships and operating with only the expectation that our partners become successful.</p>
                             <p className='text-white'>We trust to do the right thing the first time, every time. We look forward to the opportunity to serve you.</p>
                         </Col>
                         <Col md={6}>
-                            <h2 className='text-md-center'>Quick Links</h2>
+                            <h3 className='text-md-center'>Quick Links</h3>
                             <hr className='text-white'/>
                             <ul className='mt-3 text-md-center p-0'>
                                 <li className='mb-3'><a href="">Home</a></li>
@@ -40,7 +40,7 @@ export default function Contact() {
                 <Col lg={6}>
                         <Row>
                         <Col md={6}>
-                            <h2 className='text-md-center'>Locations</h2>
+                            <h3 className='text-md-center'>Locations</h3>
                             <hr className='text-white'/>
                             <ul className='mt-3 p-0'>
                                 <li className='mb-3'><FaLocationDot className='text-white' /><a href="https://www.google.com/maps/place/Shakthi+Decor/@11.9354809,79.8100607,17z/data=!3m1!4b1!4m6!3m5!1s0x3a536176f74b5df7:0x20491712d919c3eb!8m2!3d11.9354757!4d79.8149316!16s%2Fg%2F11b7hsqqhc?entry=ttu" target='_blank'> 233,Thiruvalluvar Salai, Near Nellithope Signal, Pondicherry-605013</a></li>
@@ -49,9 +49,9 @@ export default function Contact() {
                             </ul>
                         </Col>
                         <Col md={6}>
-                            <h2 className='text-md-center'>Visit Us</h2>
+                            <h3 className='text-md-center'>Visit Us</h3>
                             <hr className='text-white'/>
-                            <Image src={require("../assets/img/sd_logo.jpg")} className=" ms-md-auto me-md-auto d-md-block logo my-3" />
+                            <Image src={require("../assets/img/logo2.png")} className=" ms-md-auto me-md-auto d-md-block logo my-3 rounded-3" />
                             <div className='text-md-center mt-lg-5 mt-3'>
                                 <a href="https://www.facebook.com/shakthi.decor.9?mibextid=ZbWKwL" className='me-2'><FaFacebookF className='con_icon' /></a>
                                 <a href="" className='me-2'><FaInstagram className='con_icon ' /></a>

@@ -4,18 +4,22 @@ import Contact from './components/Contact';
 import CountUpPage from './components/CountUpPage';
 import FloatingBtn from './components/FloatingBtn';
 import FormSection from './components/FormSection';
+import Gallery from './components/Gallery';
 import Header from './components/Header';
+import OurService from './components/OurService';
+import ProjectComplete from './components/ProjectComplete';
 import Testimonial from './components/Testimonial';
-import WhyShakthi from './components/WhyShakthi';
 
 function App() {
   return (
     <>
       <Header />
       <Carol />
-      <CountUpPage />
       <FormSection />
-      <WhyShakthi />
+      <Gallery />
+      <ProjectComplete />
+      <OurService />
+      <CountUpPage />
       <Testimonial />
       <Contact />
       <FloatingBtn />

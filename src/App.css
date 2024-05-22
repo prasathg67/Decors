@@ -5,6 +5,10 @@
 .logo{
     width: 60%;
 }
+.navbar .collapsed{
+    background: #9cc2ff !important;
+}
+
 Nav{
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
@@ -81,6 +85,10 @@ Nav{
 .offcanvas-body{
     text-align: center;
 }
+.offcanvas-body .nav-link:hover{
+    background-color: #001b63 !important;
+    color: #9cc2ff !important;
+}
 /* header address */
 .header_address li{
     font-size: 15px;
@@ -126,7 +134,9 @@ Nav{
 .carousel-control-prev,.carousel-control-next{
     display: none !important;
 }
+
 /* Count Up section */
+
 .count-up{
     background-image: url('../src/assets/img/Count-bg2.jpg');
     background-position: center;
@@ -146,6 +156,7 @@ Nav{
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
 /* Contact section css */
 
 .contact_section{
@@ -154,13 +165,13 @@ Nav{
     background-size: cover;
     background-repeat: no-repeat;
 }
-.contact_section h2{
+.contact_section h3{
     font-family: "Poppins", sans-serif;
     font-size: 30px;
     font-weight: 600;
-    color: #9cc2ff;
+    color: #9cc2ff;    
 }
-.contact_section h1{
+.contact_section h2{
     font-family: "Poppins", sans-serif;
     font-size: 43px;
     font-weight: 600;
@@ -184,6 +195,7 @@ Nav{
     font-size: 17px;
     font-weight: 500;
     text-align: justify;
+    color: #001b63;
 }
 .contact_section ul li a{
     font-family: "Montserrat", sans-serif;
@@ -202,6 +214,16 @@ Nav{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
+.form_section h2{
+    font-size: 40px;
+    font-weight: 600;
+    color: #001b63;
+}
+.form_section p{
+    color: #001b63;
+    font-size: 18px;
+    font-weight: 500;
 }
 .form_section .form_imgs{
     position: relative;
@@ -239,6 +261,7 @@ Nav{
 .testimonial_section h2{
     font-size: 43px;
     font-weight: 600;
+    color: #001b63;
 }
 .divider{
     width: 50px;
@@ -251,6 +274,9 @@ Nav{
     40% {transform: translateY(-30px);}
     60% {transform: translateY(-15px);}
 }
+
+/* form section */
+
 .form_section .form_img1{
     margin-left: auto;
     margin-right: auto;
@@ -272,26 +298,160 @@ Nav{
     margin-right: auto;
     display: block;
 }
-.form_section .ht_btn{
-    font-family: "Montserrat", sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 10px 20px;
-    background-color: #001b63;
-    border-radius: 50px;
-    color: #fff;
-    transition: 0.3s;
-}
-.form_section .ht_btn:hover{
-    box-shadow: 3px 3px #001b63;
-    background-color: #9cc2ff;
-    color: #000;
-}
+
 .form_section .form-control{
     padding: 10px 20px;
     margin-bottom: 20px;
     border: 2px solid #000;
     box-shadow: 8px 8px #eae4d5;
+}
+
+/* gallery section start */
+
+.gallery_section h2{
+    font-size: 40px;
+    font-weight: 600;
+    color: #001b63;
+}
+.gallery-heading{
+    height: 300px;
+    font-size: 60px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallery-kitchen{
+    background-image: url("./assets/img/gallery-kitchen.jpg");
+    width: 100%;
+    background-size: cover;
+    transition:0.2s ease-in;
+    &:hover{
+        transform:scale(1.15);
+  }
+}
+.gallery-bedroom{
+    background-image: url("./assets/img/gallery-bedroom.jpg");
+    height: auto;
+    width: 100%;
+    background-size: cover;
+    transition:0.2s ease-in;
+    &:hover{
+      transform:scale(1.15);      
+  }
+}
+.gallery-living{
+    background-image: url("./assets/img/gallery-living.jpg");
+    height: auto;
+    width: 100%;
+    background-size: cover;
+    transition:0.2s ease-in;
+    &:hover{
+      transform:scale(1.15);
+      background-color: rgba(255, 255, 255, 0.738);
+      color: #814882;
+      
+  }
+}
+
+.gallery-dining{
+    background-image: url("./assets/img/gallery-dining.jpg");
+    max-height: 100%;
+    background-size: cover;
+    transition:0.2s ease-in;
+      &:hover{
+          transform:scale(1.15);  
+      }
+}
+.gallery-heading-dining{
+  height: 617px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  font-weight: bold;
+  
+}
+.cardd{
+  overflow:hidden;  
+}
+
+/* Project Complete */
+
+.project_section p{
+    font-size: 17px;
+    font-weight: 500;
+}
+.spacer{
+    padding: 50px 0px;
+}
+.icons-size{
+    font-size: 6rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 50px;
+    &:hover{
+        background-color: #001b63;
+        color: white;
+    }
+}
+
+.hr-lines{
+    position: relative;
+    margin: 100px auto;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.hr-lines::before{
+    content: " ";
+    height: 2px;
+    width: 130px;
+    background: red;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+.hr-lines:after{
+    content: "";
+    height: 2px;
+    width: 130px;
+    background: red;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+.span-text{
+    color:  #001b63; 
+}
+
+/* Our Service */
+.our_service{
+    background-image: url('./assets/img/service-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.our_service h2{
+    font-size: 40px;
+    font-weight: 600;
+    color: #001b63;
+}
+.our_service p{
+    font-size: 18px;
+    font-weight: 500;
+}
+.our_service ul li{
+    font-size: 20px;
+    font-weight: 500;
+    color: #001b63;
+}
+.our_service h3{
+    font-size: 25px;
+    font-weight: 600;
+    color: #001b63;
 }
 
 /* Footer section */
@@ -306,13 +466,7 @@ Nav{
 .footer_section a:hover{
     color: #9cc2ff !important;
 }
-/* Why section */
-.why_section{
-    background-image: url('.//assets/img/why.jpg');
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: cover;
-}
+
 /* Float Buttons*/
 
 .float_fb{
@@ -324,10 +478,30 @@ Nav{
 .float_insta{
     color: #C13584;
 }
+.ant-float-btn-body:hover 
+{
+    background-color: #9cc2ff !important;
+    box-shadow: 3px 3px #001b63;
 
+}
+.ant-float-btn-body:hover .float_fb
+{
+    color: #001b63 !important;
+}
+.ant-float-btn-body:hover .float_insta
+{
+    color: #001b63 !important;
+}
+.ant-float-btn-body:hover .float_whats
+{
+    color: #001b63 !important;
+}
 @media(max-width:1200px){
     .carousel-caption h2{
         font-size: 45px;
+    }
+    .navbar-nav .nav-link{
+        font-size: 16px;
     }
 }
 @media(max-width:992px){
@@ -354,14 +528,27 @@ Nav{
         width: 250px !important;
         height: 250px !important;
     }
+    .form_section h2{
+        font-size: 30px;
+    }
     .testimonial_section p{
         font-size: 15px;
     }
     .testimonial_section h2{
         font-size: 35px;
     }
+    .gallery_section h2{
+        font-size: 35px;
+    }
+    .hr-lines{
+        font-size: 35px;
+        margin: 80px auto;
+    }
 }
 @media(max-width:767px){
+    .logo{
+        width: 40%;
+    }
     .carousel-caption {
         position: static !important;
         padding: 20px 10px !important;
@@ -374,7 +561,10 @@ Nav{
         font-size: 25px;
     }
     .carousel-caption p{
-        font-size: 18px;
+        font-size: 15px;
+    }
+    .form_section h2{
+        font-size: 25px;
     }
     .contact_section h2{
         font-size: 25px;
@@ -399,5 +589,31 @@ Nav{
     }
     .testimonial_section h2{
         font-size: 30px;
+    }
+    .our_service h2{
+        font-size: 30px;
+    }
+    .our_service p{
+        font-size: 15px;
+    }
+    .our_service ul li{
+        font-size: 18px;
+    }
+    .our_service h3{
+        font-size: 22px;
+    }
+    .gallery_section h2{
+        font-size: 30px;
+    }
+    .hr-lines{
+        font-size: 30px;
+        margin: 30px auto;
+    }
+}
+@media(max-width:400px){
+    .navbar-toggler{
+        position: absolute;
+        right: 0px;
+        font-size: 15px;
     }
 }

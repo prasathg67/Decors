@@ -24,7 +24,7 @@ export default function FormSection() {
       <h2 className='text-center'>Transform Your Space With The Best Interior Designers</h2>
       <p className='text-center'> <b> Let's bring your vision to life!</b></p>
       <Container>
-        <Row className='pt-5'>
+        <Row className='pt-lg-5 pt-2'>
           <Col lg={4} >
             <h3 className='py-3'>Schedule Your Appointment Now!</h3>
             <Form noValidate validated={validated} onSubmit={handleSubmit} className="form">
