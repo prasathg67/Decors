@@ -259,7 +259,7 @@ Nav{
     font-weight: 600;
 }
 .testimonial_section h2{
-    font-size: 43px;
+    font-size: 40px;
     font-weight: 600;
     color: #001b63;
 }
@@ -496,6 +496,182 @@ Nav{
 {
     color: #001b63 !important;
 }
+
+/* About section */
+
+
+/* about */
+.about {
+    background-color: #fff;
+    position: relative;  
+}
+.about_sec {
+    position: absolute;
+    top: 0;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+    border-radius: 0 0 20px 20px;
+}
+.about_sec span{
+    font-size: 18px;
+    font-style: italic;
+    color: #9cc2ff;
+}
+.about_img {
+    width: 100%;
+    height: auto;
+}
+.about_sec h2 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #001b63;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: justify;
+}
+/* Why Section */
+.why_section h2{
+    font-size: 40px;
+    font-weight: 600;
+    color: #001b63;
+}
+.why_section p{
+    font-size: 17px;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.why_section {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+}
+.image-container img {
+    width: 100%;
+    height: auto;
+  
+}
+.why_section .content {
+    padding: 20px;
+    position: relative;
+}
+.why_section .step {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.why_section .boxpoint {
+    position: absolute; 
+    left: -80px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 33px;
+    margin-top: 40px;
+    background: #eee;
+    width: 600px;
+}
+
+.why_section .box {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+.why_section .bulb {
+    width: 100%;
+}
+
+.why_section .light-bulb {
+    width: 80px;
+    height: 70%;
+    padding: 10px;
+
+}
+
+.why_section .ideas {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #255444;
+}
+
+.why_section .discussion {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #255444;
+
+}
+.why_section .plans {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #255444;
+}
+.why_section .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.why_section .reception {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.why_section .par {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+.why_section .step {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.why_section .step h2 {
+    font-size: 1.5rem;
+    color: #9cc2ff;
+    padding: 10px;
+}
+.why_section .step img {
+    width: 70px;
+    height: 70px;
+    margin: 10px 0;
+}
+.why_section .step p {
+    font-size: 16px;
+    color: #001b63;
+    margin: 5px 0;
+}
+.why_section .step span {
+    font-size: 15px;
+    color: #001b63;
+}
+  
+@media(max-width:1350px){
+    .why_section .step img {
+        width: 50px;
+        height: 50px;
+    }
+    .why_section .boxpoint{
+        margin-top: 20px;
+    }
+}
+@media(max-width:1350px){
+    .why_section .boxpoint{
+        position: static;
+        display: none;
+    }
+}
+  
 @media(max-width:1200px){
     .carousel-caption h2{
         font-size: 45px;
@@ -543,6 +719,19 @@ Nav{
     .hr-lines{
         font-size: 35px;
         margin: 80px auto;
+    }
+    .about_sec{
+        position: static;
+    }
+    .why_section h2{
+        font-size: 35px;
+    }
+    .why_section .boxpoint {
+        margin-left: 0px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
     }
 }
 @media(max-width:767px){
@@ -609,11 +798,21 @@ Nav{
         font-size: 30px;
         margin: 30px auto;
     }
+    .about_img {
+        text-align: center;
+    }
+    .why_section h2{
+        font-size: 30px;
+    }
+    .why_section p{
+        font-size: 15px;
+    }
 }
+
 @media(max-width:400px){
     .navbar-toggler{
         position: absolute;
-        right: 0px;
+        right: 20px;
         font-size: 15px;
     }
 }

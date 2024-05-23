@@ -12,7 +12,7 @@ export default function ProjectComplete() {
     <h2 className='hr-lines text-center'>Project Completion In <span className='span-text'> 40 Working Days</span></h2>
     
     </div>
-    <Container className='project_section'>
+    <Container className='project_section'  data-aos="fade-up"  >
         <Row>
             <Col className='text-center'><FontAwesomeIcon icon={faPeopleGroup} className='icons-size' /><p>Talk to our Interior Designer</p> </Col>
             <Col className='text-center'><FontAwesomeIcon icon={faPenToSquare} className='icons-size' /> <p>Detailed Drawing & Approval</p></Col>

@@ -5,7 +5,7 @@ export default function Gallery() {
   return (
     <>
 
-        <Container className='gallery_section py-lg-5 py-3'>
+        <Container className='gallery_section py-lg-5 py-3'  data-aos="fade-up">
             <Row>
                 <h2 className='text-center mb-lg-4 mb-3'>Our Galleries</h2>
             </Row>

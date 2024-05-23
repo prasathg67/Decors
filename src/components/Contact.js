@@ -12,7 +12,7 @@ export default function Contact() {
       }, []);
 
   return (
-    <div  data-aos="fade-up" data-aos-easing="linear" data-aos-duration="400">
+    <div  data-aos="fade-up" data-aos-easing="linear">
       <section className='contact_section py-lg-5 py-3'>
         <Container>
             <h2 className='text-center text-white mb-lg-5 mb-3'>Contact Us</h2>
