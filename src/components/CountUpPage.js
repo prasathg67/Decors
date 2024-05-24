@@ -33,7 +33,7 @@ export default function CountUpPage() {
             </Col>
             <Col md={3}>
               <h1>
-              {countOn && <CountUp start={0} end={350} duration={2} delay={0}/>}
+              {countOn && <CountUp start={0} end={50} duration={2} delay={0}/>}
               +
               </h1>
               <p className='m-0'>Awards</p>

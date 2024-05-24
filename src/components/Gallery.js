@@ -3,9 +3,9 @@ import { Col, Container, Row } from 'react-bootstrap'
 
 export default function Gallery() {
   return (
-    <>
+    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="400" id='gallery'>
 
-        <Container className='gallery_section py-lg-5 py-3'  data-aos="fade-up">
+        <Container className='gallery_section py-lg-5 py-3'>
             <Row>
                 <h2 className='text-center mb-lg-4 mb-3'>Our Galleries</h2>
             </Row>
@@ -38,6 +38,6 @@ export default function Gallery() {
                 </Col>
             </Row>
         </Container>
-    </>
+    </div>
   )
 }

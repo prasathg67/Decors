@@ -14,9 +14,28 @@ Nav{
     font-weight: 600;
     font-size: 18px;
 }
+.navbar-nav .nav-link img{
+    opacity: 0;
+    width: 50px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: -22px;
+    margin: auto;
+}
+.navbar-nav .nav-link:hover img{
+    opacity: 1;
+}
+.navbar-nav .nav-link:is(:link,:active,:visited) .active{
+    color: #fff;
+    background-color: #001b63;
+}
 .navbar-nav .nav-link{
-    padding: 10px;
+    position: relative;
+    padding: 5px 15px !important;
+    align-content: center;
     margin: 0px 10px;
+    margin-top: 20px;
     transition: all 0.3s;
     border-radius: 50px;
     font-family: "Montserrat", sans-serif;
@@ -26,7 +45,6 @@ Nav{
 .navbar-nav .nav-link:hover{
     background-color: #001b63 !important;
     border-radius: 50px;
-
 }
 .header__sticky-sticky-menu {
     position: fixed;
@@ -87,7 +105,6 @@ Nav{
 }
 .offcanvas-body .nav-link:hover{
     background-color: #001b63 !important;
-    color: #9cc2ff !important;
 }
 /* header address */
 .header_address li{
@@ -809,7 +826,7 @@ Nav{
     }
 }
 
-@media(max-width:400px){
+@media(max-width:444px){
     .navbar-toggler{
         position: absolute;
         right: 20px;

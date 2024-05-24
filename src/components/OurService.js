@@ -6,7 +6,7 @@ export default function OurService() {
   return (
     <div>
       <section className="our_service py-lg-5 py-3" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="400">
-        <h2 className='text-center mb-lg-5 mb-3'>What We Do</h2>
+        <h2 className='text-center mb-lg-5 mb-3'  id='service'>What We Do</h2>
         <Container>
             <Row>
                 <Col lg={6}>

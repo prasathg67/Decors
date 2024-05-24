@@ -12,7 +12,7 @@ export default function Contact() {
       }, []);
 
   return (
-    <div  data-aos="fade-up" data-aos-easing="linear">
+    <div  data-aos="fade-up" data-aos-easing="linear" id='contact'>
       <section className='contact_section py-lg-5 py-3'>
         <Container>
             <h2 className='text-center text-white mb-lg-5 mb-3'>Contact Us</h2>
@@ -70,7 +70,7 @@ export default function Contact() {
                 <p className='text-white m-lg-0 text-lg-start text-center'>Copyright &copy; {year} <span className="text-nowrap"> All Rights Reserved.</span></p>
                 </Col>
                 <Col lg={6}>
-                    <p className='text-lg-end text-center m-0 text-white'>Developed By <a href="https://legendstechsolution.com/" className='text-white text-nowrap'>Legends Tech Solution</a></p>
+                    <p className='text-lg-end text-center m-0 text-white'>Developed By <a href="https://legendstechsolution.com/" target='_blank' className='text-white text-nowrap'>Legends Tech Solution</a></p>
                 </Col>
             </Row>
         </Container>

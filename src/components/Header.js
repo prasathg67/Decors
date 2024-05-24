@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
-import { Col, Image, Row } from 'react-bootstrap';
+import {Image} from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { FaLocationDot } from 'react-icons/fa6';
 import { IoCall } from "react-icons/io5";
+import { Link } from 'react-scroll-trigger';
 
 
 export default function Header({variant}) {
@@ -21,8 +22,7 @@ export default function Header({variant}) {
     }, []);
   return (
     <>
-    {/* Navabr section */}
-      
+    {/* Navabr section */}      
       <div className={`header__sticky ${ variant ? variant : "" } ${isSticky ? "header__sticky-sticky-menu" : ""}`}>
         <section className="header_address fixed-top pt-2">
           <ul className='hide_mobile d-flex justify-content-end'>
@@ -52,12 +52,12 @@ export default function Header({variant}) {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                    <Nav.Link href="#action1" className='text-white'>Home</Nav.Link>
-                    <Nav.Link href="#action2" className='text-white'>About</Nav.Link>
-                    <Nav.Link href="#action3" className='text-white'>Services</Nav.Link>
-                    <Nav.Link href="#action4" className='text-white'>Gallery</Nav.Link>
-                    <Nav.Link href="#action5" className='text-white'>Contact</Nav.Link>
-                    <Nav.Link href="tel:9944808181" className='call-btn'><IoCall /> Call Now</Nav.Link>
+                    <Nav.Link className='text-white active'>Home<Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
+                    <Nav.Link href='#about' to="about" spy={true} smooth={true} offset={150} duration={500} className='text-white'>About <Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
+                    <Nav.Link href='#gallery' to="gallery" spy={true} smooth={true} offset={50} duration={500} className='text-white'>Gallery<Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
+                    <Nav.Link href='#service' to="service" spy={true} smooth={true} offset={150} duration={500} className='text-white'>Services<Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
+                    <Nav.Link href='#contact' to="contact" spy={true} smooth={true} offset={50} duration={500} className='text-white'>Contact<Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
+                    <Nav.Link href='#book' to="contact" spy={true} smooth={true} offset={50} duration={500} className='call-btn'><IoCall /> Book Now</Nav.Link>
                 </Nav>                
               </Offcanvas.Body>
             </Navbar.Offcanvas>

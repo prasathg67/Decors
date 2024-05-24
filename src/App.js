@@ -11,8 +11,10 @@ import Header from './components/Header';
 import OurService from './components/OurService';
 import ProjectComplete from './components/ProjectComplete';
 import Testimonial from './components/Testimonial';
+import { useEffect } from 'react';
 
 function App() {
+  
   return (
     <>
       <Header />
@@ -20,10 +22,10 @@ function App() {
       <About />
       <CountUpPage />
       <Gallery />
+      <OurService />
       <FormSection />
       <ProjectComplete />
       <WhySection />
-      <OurService />
       <Testimonial />
       <Contact />
       <FloatingBtn />

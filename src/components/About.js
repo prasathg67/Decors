@@ -3,8 +3,8 @@ import { Col, Container, Image, Row } from "react-bootstrap";
 
 export default function About() {
   return (
-    <div className="about">
-      <div className="about_img  d-lg-block d-none">
+    <div className="about" id="about">
+      <div className="about_img  d-lg-block d-none" >
         <Image src={require("../assets/img/about.jpg")} fluid />
       </div>
       <Container className="about_sec py-5">
@@ -12,7 +12,7 @@ export default function About() {
           <Col lg={6} md={12} className="align-self-center">
             <Image
               src={require("../assets/img/latestinteriors.jpg")}
-              id="image" className="rounded-3 "
+              id="image" className="rounded-3 me-auto ms-auto d-block"
               fluid
             />
           </Col>

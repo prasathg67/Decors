@@ -20,7 +20,7 @@ export default function FormSection() {
   };
 
   return (
-    <section className="form_section py-lg-5 py-3" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+    <section className="form_section py-lg-5 py-3" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500" id='book'>
       <h2 className='text-center'>Transform Your Space With The Best Interior Designers</h2>
       <p className='text-center'> <b> Let's bring your vision to life!</b></p>
       <Container>
