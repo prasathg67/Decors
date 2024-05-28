@@ -10,7 +10,7 @@ export default function OurService() {
         <Container>
             <Row>
                 <Col lg={6}>
-                    <Image src={require('../assets/img/our_service.jpg')} className='rounded-3'/>
+                    <Image src={require('../assets/img/service.jpg')} className='rounded-3'/>
                 </Col>
                 <Col lg={6} className='mt-3'>
                     <h3>IN THE FOLLOWING SEGMENTS</h3>

@@ -7,7 +7,8 @@ export default function Gallery() {
 
         <Container className='gallery_section py-lg-5 py-3'>
             <Row>
-                <h2 className='text-center mb-lg-4 mb-3'>Our Galleries</h2>
+                <h2 className='text-center '>Our Galleries</h2>
+                <p className='text-center mb-lg-4 mb-3'>International Standard</p>
             </Row>
             <Row>
                 <Col md={8}>

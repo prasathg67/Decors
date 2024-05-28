@@ -12,6 +12,7 @@ import OurService from './components/OurService';
 import ProjectComplete from './components/ProjectComplete';
 import Testimonial from './components/Testimonial';
 import { useEffect } from 'react';
+import Companies from './components/Companies';
 
 function App() {
   
@@ -23,6 +24,7 @@ function App() {
       <CountUpPage />
       <Gallery />
       <OurService />
+      <Companies />
       <FormSection />
       <ProjectComplete />
       <WhySection />

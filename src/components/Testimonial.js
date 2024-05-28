@@ -5,6 +5,7 @@ import Slider from "react-slick";
 export default function Testimonial() {
   var settings = {
     dots: false,
+    arrows: false,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,

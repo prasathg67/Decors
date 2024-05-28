@@ -6,6 +6,7 @@ export default function About() {
     <div className="about" id="about">
       <div className="about_img  d-lg-block d-none" >
         <Image src={require("../assets/img/about.jpg")} fluid />
+        <h3 className="best rounded-3 d-xl-block d-none">Best Interior Design Solution</h3>
       </div>
       <Container className="about_sec py-5">
         <Row>

@@ -10,6 +10,7 @@ export default function CountUpPage() {
       <section className='count-up' data-aos="fade-up" data-aos-easing="linear"
      data-aos-duration="500">
         <Container className='py-md-5 py-3'>
+          <h2 className='text-center pb-lg-5 pb-3'>Our Achievements</h2>
           <Row className='text-center'>
             <Col md={3} className='m-md-0 mb-3'>
               <h1>
