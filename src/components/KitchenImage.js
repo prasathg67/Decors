@@ -11,11 +11,13 @@ import slider3 from '../assets/img/kitchen6.jpeg';
 import slider4 from '../assets/img/kitchen4.jpeg';
 import slider5 from '../assets/img/kitchen5.jpeg';
 import slider6 from '../assets/img/kitchen3.jpeg';
+import { useNavigate } from 'react-router-dom';
+import { FaArrowLeft } from 'react-icons/fa';
 
 export default function KitchenImage() {
   const [show, setShow] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleShow = (image) => {
     setSelectedImage(image);
@@ -38,6 +40,9 @@ export default function KitchenImage() {
       <HeaderTwo />
       <section className='kitchen_section'>
         <Container className='py-lg-5 py-3'>
+        <div className=" mt-4">
+            <Button onClick={() => {navigate('/')}} className="ht_btn"><FaArrowLeft />Back to Home</Button>
+          </div>
           <h2 className='text-center mb-lg-5 mb-3'>Kitchen Cupboards</h2>
           <Row>
             {images.map((image, index) => (
@@ -50,9 +55,6 @@ export default function KitchenImage() {
               </Col>
             ))}
           </Row>
-          {/* <div className="text-center mt-4">
-            <Button onClick={() => navigate('/')} className="btn btn-primary">Back to Home</Button>
-          </div> */}
         </Container>
       </section>
 

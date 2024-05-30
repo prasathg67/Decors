@@ -1,23 +1,26 @@
 import React, { useState } from 'react';
 import Contact from './Contact';
 import HeaderTwo from './HeaderTwo';
-import { Col, Container, Image, Row, Modal, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { Col, Container, Image, Row, Modal, OverlayTrigger, Tooltip, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Import images statically
 import curtains1 from '../assets/img/curtains1.jpeg';
-import curtains2 from '../assets/img/curtains4.jpeg';
-import curtains3 from '../assets/img/curtains3.jpeg';
+import curtains2 from '../assets/img/curtains3.jpeg';
+import curtains3 from '../assets/img/curtains4.jpeg';
 import curtains4 from '../assets/img/curtains2.jpeg';
 import curtains5 from '../assets/img/curtains5.jpeg';
 import curtains6 from '../assets/img/curtains6.jpeg';
-import curtains7 from '../assets/img/curtains7.jpeg';
-import curtains8 from '../assets/img/curtains8.jpeg';
+import curtains7 from '../assets/img/curtains8.jpeg';
+import curtains8 from '../assets/img/curtains7.jpeg';
 import curtains9 from '../assets/img/curtains9.jpeg';
+import { useNavigate } from 'react-router-dom';
+import { FaArrowLeft } from 'react-icons/fa';
 
 export default function CurtainsImage() {
   const [show, setShow] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const navigate = useNavigate();
 
   const handleShow = (image) => {
     setSelectedImage(image);
@@ -43,6 +46,9 @@ export default function CurtainsImage() {
       <HeaderTwo />
       <section className='curtains_section'>
         <Container className='py-lg-5 py-3'>
+          <div className=" mt-4">
+            <Button onClick={() => {navigate('/')}} className="ht_btn"><FaArrowLeft />Back to Home</Button>
+          </div>
           <h2 className='text-center mb-lg-5 mb-3'>Curtains Gallery</h2>
           <Row>
             {images.map((image, index) => (

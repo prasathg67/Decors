@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Contact from './Contact';
 import HeaderTwo from './HeaderTwo';
-import { Col, Container, Image, Row, Modal, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { Col, Container, Image, Row, Modal, OverlayTrigger, Tooltip, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Import images statically
@@ -14,10 +14,13 @@ import mesh6 from '../assets/img/mesh6.jpeg';
 import mesh7 from '../assets/img/mesh7.jpeg';
 import mesh8 from '../assets/img/mesh8.jpeg';
 import mesh9 from '../assets/img/mesh9.jpeg';
+import { useNavigate } from 'react-router-dom';
+import { FaArrowLeft } from 'react-icons/fa6';
 
 export default function MeshImage() {
   const [show, setShow] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const navigate = useNavigate();
 
   const handleShow = (image) => {
     setSelectedImage(image);
@@ -43,6 +46,9 @@ export default function MeshImage() {
       <HeaderTwo />
       <section className='mesh_section'>
         <Container className='py-lg-5 py-3'>
+        <div className=" mt-4">
+            <Button onClick={() => {navigate('/')}} className="ht_btn"><FaArrowLeft />Back to Home</Button>
+          </div>
           <h2 className='text-center mb-lg-5 mb-3'>Mesh Gallery</h2>
           <Row>
             {images.map((image, index) => (

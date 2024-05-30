@@ -55,12 +55,12 @@ export default function HeaderTwo({variant}) {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                    <Nav.Link className='text-dark active'>Home<Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
-                    <Nav.Link href='' onClick={()=>{navigate('/about')}} className='text-dark'>About <Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
-                    <Nav.Link href='' onClick={()=>{navigate('/gallery')}} className='text-dark'>Gallery<Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
-                    <Nav.Link href='' onClick={()=>{navigate('/services')}} className='text-dark'>Services<Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
+                    <Nav.Link href='' className='text-dark active' onClick={()=>{navigate('/')}}>Home<Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
+                    <Nav.Link href='' onClick={()=>{navigate('/')}} className='text-dark'>About <Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
+                    <Nav.Link href='' onClick={()=>{navigate('/')}} className='text-dark'>Gallery<Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
+                    <Nav.Link href='' onClick={()=>{navigate('/')}} className='text-dark'>Services<Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
                     <Nav.Link href='#contact' className='text-dark'>Contact<Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
-                    <Nav.Link href='' onClick={()=>{navigate('/booknow')}} to="contact" spy={true} smooth={true} offset={50} duration={500} className='call-btn'><IoCall /> Book Now</Nav.Link>
+                    <Nav.Link href='' onClick={()=>{navigate('/')}} to="contact" spy={true} smooth={true} offset={50} duration={500} className='call-btn'><IoCall /> Book Now</Nav.Link>
                 </Nav>                
               </Offcanvas.Body>
             </Navbar.Offcanvas>

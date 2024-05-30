@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { FaLocationDot } from 'react-icons/fa6';
-import { IoCall } from "react-icons/io5";
+import { IoCall, IoCallSharp } from "react-icons/io5";
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-scroll-trigger';
 
@@ -32,7 +32,8 @@ export default function Header({variant}) {
       <div className={`header__sticky ${ variant ? variant : "" } ${isSticky ? "header__sticky-sticky-menu" : ""}`}>
         <section className="header_address fixed-top pt-2">
           <ul className='hide_mobile d-flex justify-content-end'>
-            <li className='me-3 d-lg-block d-none pe-5'><FaLocationDot className='ad_icon me-2' /><a href="https://www.google.com/maps/place/Shakthi+Decor/@11.9354809,79.8100607,17z/data=!3m1!4b1!4m6!3m5!1s0x3a536176f74b5df7:0x20491712d919c3eb!8m2!3d11.9354757!4d79.8149316!16s%2Fg%2F11b7hsqqhc?entry=ttu" target='_blank' className='text-white' >233,Thiruvalluvar Salai, Near Nellithope Signal, Pondicherry-605013</a></li>
+            <li className='me-3 d-lg-block d-none pe-2'><FaLocationDot className='ad_icon me-2' /><a href="https://www.google.com/maps/place/Shakthi+Decor/@11.9354809,79.8100607,17z/data=!3m1!4b1!4m6!3m5!1s0x3a536176f74b5df7:0x20491712d919c3eb!8m2!3d11.9354757!4d79.8149316!16s%2Fg%2F11b7hsqqhc?entry=ttu" target='_blank' className='text-white' >233,Thiruvalluvar Salai, Near Nellithope Signal, Pondicherry-605013</a></li>
+            <li className='d-lg-block d-none pe-5'><IoCallSharp /><a className='text-white' href="tel:9944808181">99448 08181</a></li>
           </ul>
         </section>
       {['lg'].map((expand) => (

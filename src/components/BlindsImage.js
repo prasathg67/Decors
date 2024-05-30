@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Contact from './Contact';
 import HeaderTwo from './HeaderTwo';
-import { Col, Container, Image, Row, Modal, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { Col, Container, Image, Row, Modal, OverlayTrigger, Tooltip, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Import images statically
@@ -14,10 +14,13 @@ import blinds6 from '../assets/img/blinds4.jpeg';
 import blinds7 from '../assets/img/blinds8.jpeg';
 import blinds8 from '../assets/img/blinds9.jpeg';
 import blinds9 from '../assets/img/blinds10.jpeg';
+import { useNavigate } from 'react-router-dom';
+import { FaArrowLeft } from 'react-icons/fa6';
 
 export default function BlindsImage() {
   const [show, setShow] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const navigate = useNavigate();
 
   const handleShow = (image) => {
     setSelectedImage(image);
@@ -43,6 +46,9 @@ export default function BlindsImage() {
       <HeaderTwo />
       <section className='blinds_section'>
         <Container className='py-lg-5 py-3'>
+        <div className=" mt-4">
+            <Button onClick={() => {navigate('/')}} className="ht_btn"><FaArrowLeft />Back to Home</Button>
+          </div>
           <h2 className='text-center mb-lg-5 mb-3'>Blinds Gallery</h2>
           <Row>
             {images.map((image, index) => (
@@ -60,6 +66,9 @@ export default function BlindsImage() {
               </Col>
             ))}
           </Row>
+          <div className="text-center mt-4">
+            <Button onClick={() => {navigate('/')}} className="ht_btn">Back to Home</Button>
+          </div>
         </Container>
       </section>
 

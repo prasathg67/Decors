@@ -114,6 +114,18 @@ Nav{
 .offcanvas-body .nav-link:hover{
     background-color: #001b63 !important;
 }
+.kitchen_section h2::after, .curtains_section h2::after, .blinds_section h2::after, .mesh_section h2::after{
+    background-color: #001b63;
+    bottom: -10px;
+    height: 4px;
+    width: 50px;
+    position: relative;
+    content: "";
+    display: block;
+    left: 0;
+    margin: auto;
+    right: 0;
+}
 /*kitchen Images*/
 
 .kitchen_section img{
@@ -508,6 +520,7 @@ Nav{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgba(128, 128, 128, 0.161);
 }
 .our_service h2{
     font-size: 40px;

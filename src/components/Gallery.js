@@ -24,7 +24,7 @@ export default function Gallery() {
                     </Row>
                     <Row className='mt-3'>
                         <Col md={6}>
-                            <div  className='cardd' style={{cursor:'pointer'}} onClick={()=>{navigation('/curtainsImages')}}>
+                            <div  className='cardd' style={{cursor:'pointer'}} onClick={()=>{navigation('/curtainsImage')}}>
                         <div className='gallery-bedroom'><h1 className='gallery-heading text-light mb-auto'>CURTAINS</h1></div>
                         </div>
                         </Col>

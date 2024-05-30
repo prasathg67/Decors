@@ -26,10 +26,10 @@ root.render(
       <Route path='/blindsImage' element={<BlindsImage />} />
       <Route path='/curtainsImage' element={<CurtainsImage />} />
       <Route path='/meshImage' element={<MeshImage />} />
-      <Route path='/about' element={<About />} />
-      <Route path='/gallery' element={<Gallery />} />
-      <Route path='/services' element={<OurService />} />
-      <Route path='/booknow' element={<FormSection />} />
+      <Route path='/' element={<App />} />
+      <Route path='/' element={<App />} />
+      <Route path='/' element={<App />} />
+      <Route path='/' element={<App />} />
     </Routes>
     </BrowserRouter>
   </React.StrictMode>
