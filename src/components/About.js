@@ -12,7 +12,7 @@ export default function About() {
         <Row>
           <Col lg={6} md={12} className="align-self-center">
             <Image
-              src={require("../assets/img/latestinteriors.jpg")}
+              src={require("../assets/img/about.jpeg")}
               id="image" className="rounded-3 me-auto ms-auto d-block"
               fluid
             />

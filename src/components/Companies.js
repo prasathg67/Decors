@@ -11,6 +11,9 @@ export default function Companies() {
                 <Image src={require('../assets/img/jayaram.png')} className='pe-5' />
                 <Image src={require('../assets/img/sunway.jpg')} className='pe-5' />
                 <Image src={require('../assets/img/hotel-atithi-pondicherry-logo.jpg')} className='pe-5' />
+                <Image src={require('../assets/img/shasun.jpg')} className='pe-5' />
+                <Image src={require('../assets/img/asian-paints-vector-logo.png')} className='pe-5' />
+                <Image src={require('../assets/img/TVS-Motor-Logo.jpg')} className='pe-5' />
             </marquee>
         </Container>
     </div>

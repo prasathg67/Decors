@@ -87,6 +87,11 @@ Nav{
     z-index: 999;
     width: 100%;
 }
+.navbartwo {
+    background-color: #fff;
+    position: static !important;
+
+}
 .call-btn{
     background-color: #1ae2e5 !important;
     border-radius: 50px;

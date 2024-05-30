@@ -18,10 +18,11 @@ export default function OurService() {
                     <ul>
                         <li><SiTicktick /> Curtains</li>
                         <li><SiTicktick /> Mosquito Mesh</li>
+                        <li><SiTicktick /> Magnet Mesh Door</li>
                         <li><SiTicktick /> PVC Blinds</li>
                         <li><SiTicktick /> Sofa Lining Works</li>
                         <li><SiTicktick /> Vinyl Flooring</li>
-                        <li><SiTicktick /> Shutter Type Netion</li>
+                        <li><SiTicktick /> Shutter Type Netlon</li>
                     </ul>
                     <Button className='ht_btn mt-lg-4 mt-3'>Book Now!</Button>
                 </Col>

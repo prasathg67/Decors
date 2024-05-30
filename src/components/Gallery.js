@@ -1,7 +1,9 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
 
 export default function Gallery() {
+    const navigation = useNavigate();
   return (
     <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="400" id='gallery'>
 
@@ -14,7 +16,7 @@ export default function Gallery() {
                 <Col md={8}>
                     <Row> 
                     <Col>
-                        <div className='cardd'>
+                        <div className='cardd' onClick={()=>{navigation('/kitchenImage')} }>
                         <div className='gallery-kitchen'><h1 className='gallery-heading p-5 text-light mb-auto'>KITCHEN</h1></div>
                         </div>
                         </Col>
