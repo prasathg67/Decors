@@ -6,11 +6,17 @@ import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { FaLocationDot } from 'react-icons/fa6';
 import { IoCall } from "react-icons/io5";
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-scroll-trigger';
 
 
 export default function Header({variant}) {
+  const navigate = useNavigate()
     const [isSticky, setIsSticky] = useState(false);
+    const goToHome=()=>{
+      navigate('/');
+  
+    }
     useEffect(() => {
         window.addEventListener("scroll", () => {
         if (window.scrollY > 0) {
@@ -34,7 +40,7 @@ export default function Header({variant}) {
             <Container fluid >
             <Navbar.Brand href="#"><Image
                 src={require("../assets/img/logo2.png")}
-                className="logo rounded-3"
+                className="logo rounded-3" onClick={()=>navigate('/')}
               ></Image></Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
@@ -52,7 +58,7 @@ export default function Header({variant}) {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                    <Nav.Link className='text-white active'>Home<Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
+                    <Nav.Link  onClick={goToHome} className='text-white active'>Home<Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
                     <Nav.Link href='#about' to="about" spy={true} smooth={true} offset={150} duration={500} className='text-white'>About <Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
                     <Nav.Link href='#gallery' to="gallery" spy={true} smooth={true} offset={50} duration={500} className='text-white'>Gallery<Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
                     <Nav.Link href='#service' to="service" spy={true} smooth={true} offset={150} duration={500} className='text-white'>Services<Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>

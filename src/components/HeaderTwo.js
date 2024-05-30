@@ -6,10 +6,13 @@ import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { FaLocationDot } from 'react-icons/fa6';
 import { IoCall } from "react-icons/io5";
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-scroll-trigger';
 
 
 export default function HeaderTwo({variant}) {
+  const navigate = useNavigate()
+
     const [isSticky, setIsSticky] = useState(false);
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -32,9 +35,9 @@ export default function HeaderTwo({variant}) {
       {['lg'].map((expand) => (
         <Navbar key={expand} expand={expand} className="navbartwo py-3">
             <Container fluid >
-            <Navbar.Brand href="#"><Image
+            <Navbar.Brand ><Image
                 src={require("../assets/img/logo2.png")}
-                className="logo rounded-3"
+                className="logo rounded-3" onClick={()=>{navigate('/')}}
               ></Image></Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
@@ -53,11 +56,11 @@ export default function HeaderTwo({variant}) {
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                     <Nav.Link className='text-dark active'>Home<Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
-                    <Nav.Link href='/#about' to="about" spy={true} smooth={true} offset={150} duration={500} className='text-dark'>About <Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
-                    <Nav.Link href='/' to="gallery" spy={true} smooth={true} offset={50} duration={500} className='text-dark'>Gallery<Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
-                    <Nav.Link href='#service' to="service" spy={true} smooth={true} offset={150} duration={500} className='text-dark'>Services<Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
-                    <Nav.Link href='#contact' to="contact" spy={true} smooth={true} offset={50} duration={500} className='text-dark'>Contact<Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
-                    <Nav.Link href='#book' to="contact" spy={true} smooth={true} offset={50} duration={500} className='call-btn'><IoCall /> Book Now</Nav.Link>
+                    <Nav.Link href='' onClick={()=>{navigate('/about')}} className='text-dark'>About <Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
+                    <Nav.Link href='' onClick={()=>{navigate('/gallery')}} className='text-dark'>Gallery<Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
+                    <Nav.Link href='' onClick={()=>{navigate('/services')}} className='text-dark'>Services<Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
+                    <Nav.Link href='#contact' className='text-dark'>Contact<Image src={require('../assets/img/menu-icon.png')}/></Nav.Link>
+                    <Nav.Link href='' onClick={()=>{navigate('/booknow')}} to="contact" spy={true} smooth={true} offset={50} duration={500} className='call-btn'><IoCall /> Book Now</Nav.Link>
                 </Nav>                
               </Offcanvas.Body>
             </Navbar.Offcanvas>

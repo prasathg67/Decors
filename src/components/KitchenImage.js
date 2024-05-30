@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Contact from './Contact';
 import HeaderTwo from './HeaderTwo';
-import { Col, Container, Image, Row, Modal } from 'react-bootstrap';
+import { Col, Container, Image, Row, Modal, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Import images statically
@@ -15,6 +15,7 @@ import slider6 from '../assets/img/kitchen3.jpeg';
 export default function KitchenImage() {
   const [show, setShow] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  // const navigate = useNavigate();
 
   const handleShow = (image) => {
     setSelectedImage(image);
@@ -37,7 +38,7 @@ export default function KitchenImage() {
       <HeaderTwo />
       <section className='kitchen_section'>
         <Container className='py-lg-5 py-3'>
-          <h2 className='text-center mb-lg-5 mb-3'>Kitchen PVC Cupboards</h2>
+          <h2 className='text-center mb-lg-5 mb-3'>Kitchen Cupboards</h2>
           <Row>
             {images.map((image, index) => (
               <Col lg={4} md={6} className='mb-4' key={index}>
@@ -49,6 +50,9 @@ export default function KitchenImage() {
               </Col>
             ))}
           </Row>
+          {/* <div className="text-center mt-4">
+            <Button onClick={() => navigate('/')} className="btn btn-primary">Back to Home</Button>
+          </div> */}
         </Container>
       </section>
 
