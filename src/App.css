@@ -87,6 +87,11 @@ Nav{
     z-index: 999;
     width: 100%;
 }
+.nav-link.active {
+    font-weight: bold;
+    color: #ff0000; /* Change this to your desired color */
+  }
+  
 .navbartwo {
     background-color: #fff;
     position: static !important;
@@ -317,7 +322,7 @@ Nav{
 }
 /* Testimonial section */
 .testimonial_section{
-    background-color: #8484845f;
+    background-color: rgba(128, 128, 128, 0.161);
 }
 .testimonial_section .card{
     position: relative;

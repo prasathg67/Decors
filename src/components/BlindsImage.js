@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Contact from './Contact';
 import HeaderTwo from './HeaderTwo';
-import { Col, Container, Image, Row, Modal, OverlayTrigger, Tooltip, Button } from 'react-bootstrap';
+import { Col, Container, Image, Row, Modal, OverlayTrigger, Tooltip, Button, Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Import images statically
@@ -15,15 +15,15 @@ import blinds7 from '../assets/img/blinds8.jpeg';
 import blinds8 from '../assets/img/blinds9.jpeg';
 import blinds9 from '../assets/img/blinds10.jpeg';
 import { useNavigate } from 'react-router-dom';
-import { FaArrowLeft } from 'react-icons/fa6';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa6';
 
 export default function BlindsImage() {
   const [show, setShow] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(0);
   const navigate = useNavigate();
 
-  const handleShow = (image) => {
-    setSelectedImage(image);
+  const handleShow = (index) => {
+    setSelectedIndex(index);
     setShow(true);
   };
 
@@ -41,13 +41,21 @@ export default function BlindsImage() {
     { src: blinds9, name: 'Screen Blinds' },
   ];
 
+  const handlePrev = () => {
+    setSelectedIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+  };
+
+  const handleNext = () => {
+    setSelectedIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+  };
+
   return (
     <>
       <HeaderTwo />
       <section className='blinds_section'>
         <Container className='py-lg-5 py-3'>
-        <div className=" mt-4">
-            <Button onClick={() => {navigate('/')}} className="ht_btn"><FaArrowLeft />Back to Home</Button>
+          <div className=" mt-4">
+            <Button onClick={() => {navigate('/')}} className="ht_btn"><FaArrowLeft /> Back to Home</Button>
           </div>
           <h2 className='text-center mb-lg-5 mb-3'>Blinds Gallery</h2>
           <Row>
@@ -59,25 +67,35 @@ export default function BlindsImage() {
                 >
                   <Image 
                     src={image.src} 
-                    onClick={() => handleShow(image.src)}   
+                    onClick={() => handleShow(index)}   
                     style={{ cursor: 'pointer' }}
                   />
                 </OverlayTrigger>
               </Col>
             ))}
-          </Row>
-          <div className="text-center mt-4">
-            <Button onClick={() => {navigate('/')}} className="ht_btn">Back to Home</Button>
-          </div>
+          </Row>          
         </Container>
       </section>
 
-      <Modal show={show} onHide={handleClose} centered>
+      <Modal show={show} onHide={handleClose} centered size="lg">
         <Modal.Body>
-          {selectedImage && <Image src={selectedImage} fluid />}
+          <div className="d-flex justify-content-between align-items-center">
+            <Button variant="light" onClick={handlePrev}>
+              <FaArrowLeft />
+            </Button>
+            <Carousel activeIndex={selectedIndex} onSelect={(selectedIndex) => setSelectedIndex(selectedIndex)} indicators={false} controls={false}>
+              {images.map((image, index) => (
+                <Carousel.Item key={index}>
+                  <Image src={image.src} fluid />
+                </Carousel.Item>
+              ))}
+            </Carousel>
+            <Button variant="light" onClick={handleNext}>
+              <FaArrowRight />
+            </Button>
+          </div>
         </Modal.Body>
       </Modal>
-
       <Contact />
     </>
   );
